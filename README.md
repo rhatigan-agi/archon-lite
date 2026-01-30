@@ -13,7 +13,7 @@ A compiler-style workflow and governance engine for AI-assisted software develop
 - Not runtime AI governance for model inference
 
 <p align="center">
-  <img src="./assets/archon-lite-banner.png" alt="Archon-Lite: From chaos to structure" width="100%">
+  <img src="./assets/archon-lite-banner-thin.png" alt="Archon-Lite: From chaos to structure" width="100%">
 </p>
 
 [![Status](https://img.shields.io/badge/status-coming%20soon-blue)]()
