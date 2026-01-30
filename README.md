@@ -19,7 +19,7 @@
 
 The compiler engine is currently in private development. Public release is planned once the CLI interface is production-hardened.
 
-[Join the discussion →](../../discussions) — feedback on the philosophy and design is welcome now.
+[Join the discussion →](../../discussions/1) — feedback on the philosophy and design is welcome now.
 
 ---
 
