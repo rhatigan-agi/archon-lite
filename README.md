@@ -5,7 +5,7 @@
 > The AI is not trusted. The compiler is.
 
 [![Status](https://img.shields.io/badge/status-coming%20soon-blue)]()
-[![License](https://img.shields.io/badge/license-MIT-green)]()
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](./LICENSE)
 
 ---
 
