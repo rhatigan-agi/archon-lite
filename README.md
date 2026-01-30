@@ -4,6 +4,14 @@
 
 > The AI is not trusted. The compiler is.
 
+**What this is:**  
+A compiler-style workflow and governance engine for AI-assisted software development.
+
+**What this is not:**  
+- Not a chat-based coding assistant  
+- Not a policy wrapper around LLMs  
+- Not runtime AI governance for model inference
+
 <p align="center">
   <img src="./assets/archon-lite-banner.png" alt="Archon-Lite: From chaos to structure" width="100%">
 </p>
@@ -29,7 +37,7 @@ Here's the frustrating paradox we're all living right now: AI code generation ha
 
 I call this the **10x review burden**.
 
-We're drowning in what I think of as "probabilistic hallucinations"—not model hallucinations in the abstract sense, but the very real kind: invented file paths, schema assumptions that don't match reality, and architectural violations that look plausible until they blow up in production.
+We're drowning in probabilistic hallucinations—not abstract model errors, but concrete failures: invented file paths, incorrect schema assumptions, and architectural violations that look plausible until they hit production.
 
 Most modern AI tools optimize for *generation* at the expense of *correctness*. They operate on vibes—statistical guesses about what might work—rather than deterministic engineering principles. No concept of invariants. No awareness of existing provenance. No structural proof.
 
@@ -37,7 +45,7 @@ Most modern AI tools optimize for *generation* at the expense of *correctness*. 
 
 ---
 
-## The Philosophy: From "AI Vibes" to "Compiler-Grade"
+## Design Principle: From Probabilistic Generation to Deterministic Compilation
 
 ### 1. The AI is a Specialist Under Contract
 
@@ -54,6 +62,8 @@ Models are replaceable; invariants are not.
 ### 2. The "Linker" Stage: Ending Hallucinations with Deterministic Discovery
 
 A critical failure in vibe-based coding is the invention of file paths and non-existent symbols. Archon addresses this through the **Discovery Phase**, which acts as the "Linker" stage of the development compiler.
+
+Just as a traditional linker refuses to build when symbols don't resolve, Archon refuses to plan when files, schemas, or ownership can't be proven.
 
 Before a single line of code is planned, the system performs deterministic repository reconnaissance.
 
@@ -74,12 +84,12 @@ By utilizing AST (Abstract Syntax Tree) based scanning, Archon extracts absolute
 
 To make AI trustworthy enough for production, Archon utilizes a graduated governance architecture. This engine moves the workflow through a hierarchy of deterministic checks, ensuring that vibes are replaced by state machine enforcement.
 
-| Layer | Definition | Enforcement |
-|-------|------------|-------------|
-| **L0: Structural Invariants** | Hardcoded, non-configurable compiler rules | G-001 through G-008. Non-negotiable. |
-| **L1: Project Policy** | Machine-checkable, configurable project failures | Deterministic failures based on ProjectSpec. |
-| **L2: Behavioral Analysis** | Advisory signals and warnings | Non-blocking signals like "Complexity Spike." Advisory only. |
-| **L3: Human Governance** | Explicit pauses for structural ambiguity | The "Type Cast": Human decisions recorded as authoritative truth. |
+| Layer | Definition | Enforcement | Example |
+|-------|------------|-------------|---------|
+| **L0: Structural Invariants** | Hardcoded, non-configurable compiler rules | G-001 through G-008. Non-negotiable. | "No writes outside EXECUTE" |
+| **L1: Project Policy** | Machine-checkable, configurable project failures | Deterministic failures based on ProjectSpec. | "Frontend may not import database layer" |
+| **L2: Behavioral Analysis** | Advisory signals and warnings | Non-blocking signals like "Complexity Spike." Advisory only. | "Scope explosion detected across 6 files" |
+| **L3: Human Governance** | Explicit pauses for structural ambiguity | The "Type Cast": Human decisions recorded as authoritative truth. | "Choose which frontend file owns this new interaction" |
 
 **Key insight: User Resolution as Type Cast.** When Archon hits structural ambiguity—say, multiple valid frontend placements for a new interaction—it doesn't guess. It pauses. The human's resolution isn't just "feedback"; it is a state change that the compiler treats as authoritative grounding, pruning the state space for all subsequent phases.
 
@@ -128,13 +138,20 @@ Because the timeline is immutable, the system provides genuine provenance. If an
 - ✅ Domain registry enforcement
 - ✅ Lightweight, terminal-based interface
 
+## What Archon-Lite Will Not Do
+
+- ❌ Generate code without grounding
+- ❌ Guess file locations or schemas
+- ❌ Allow execution outside declared phases
+- ❌ Bypass governance via prompting
+
 ---
 
 ## The Bottom Line
 
 The shift from "AI vibes" to "compiler invariants" marks the evolution of AI from a sophisticated autocomplete tool to a rigorous engineering partner. By focusing on verification over generation, we eliminate the 10x review burden and restore the structural integrity of our systems.
 
-**If we wouldn't trust a human developer to push code without a compiler's check, why are we letting AI do it?**
+**If we wouldn't trust a human developer to push code without a compiler, why are we letting AI do it?**
 
 ---
 
