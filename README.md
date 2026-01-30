@@ -165,5 +165,3 @@ The shift from "AI vibes" to "compiler invariants" marks the evolution of AI fro
 ## About
 
 Archon-Lite is built by [Jeff Rhatigan]([https://www.linkedin.com/in/jeff-rhatigan/]) as the open-source CLI entry point to the Archon ecosystem—architecture-first developer tooling for the AI era.
-
-Questions? Ideas? [Start a discussion →](../../discussions)
