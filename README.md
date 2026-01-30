@@ -4,6 +4,10 @@
 
 > The AI is not trusted. The compiler is.
 
+<p align="center">
+  <img src="./assets/archon-lite-banner.png" alt="Archon-Lite: From chaos to structure" width="100%">
+</p>
+
 [![Status](https://img.shields.io/badge/status-coming%20soon-blue)]()
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](./LICENSE)
 
